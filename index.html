@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="firstAngular">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  </head>
+  <body ng-controller="mainCtrl">
+    <h3>Friends in order of favorite</h3>
+    <div id="container">
+      <div>
+        <div ng-repeat="friend in friends">{{friend}}</div>
+      </div>
+
+      <div>
+        <input ng-model="name" placeholder="friendName">
+        <button ng-click="addFriend(name)">Add Friend</button>
+
+
+        <input ng-model="nameToRemove" placeholder="friend to remove">
+        <button ng-click="removeFriend(nameToRemove)">Remove Friend</button>
+      </div>
+    </div>
+
+    <script src="./js/app.js"></script>
+    <script src="./js/controller.js"></script>
+  </body>
+</html>
